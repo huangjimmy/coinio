@@ -1,0 +1,14 @@
+#include <stdint.h>
+#include <cps/utilities/git_revision.hpp>
+
+#define CPS_GIT_REVISION_SHA "@CPS_GIT_REVISION_SHA@"
+#define CPS_GIT_REVISION_UNIX_TIMESTAMP @CPS_GIT_REVISION_UNIX_TIMESTAMP@
+#define CPS_GIT_REVISION_DESCRIPTION "@CPS_GIT_REVISION_DESCRIPTION@"
+
+namespace cpsio { namespace utilities {
+
+const char* const git_revision_sha = CPS_GIT_REVISION_SHA;
+const uint32_t git_revision_unix_timestamp = CPS_GIT_REVISION_UNIX_TIMESTAMP;
+const char* const git_revision_description = CPS_GIT_REVISION_DESCRIPTION;
+
+} } // end namespace cpsio::utilities

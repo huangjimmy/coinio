@@ -1,0 +1,27 @@
+version: "2"
+
+services:
+  cpsd:
+    build:
+      context: .
+    image: cpsio/cps
+    command: /opt/cps/bin/start_cpsd.sh
+    ports:
+      - 8888:8888
+      - 9876:9876
+    expose:
+      - "8888"
+    volumes:
+      - cpsd-data-volume:/opt/cps/bin/data-dir
+
+  walletd:
+    image: cpsio/cps
+    command: /opt/cps/bin/cps-walletd
+    links:
+      - cpsd
+    volumes:
+      - walletd-data-volume:/opt/cps/bin/data-dir
+
+volumes:
+  cpsd-data-volume:
+  walletd-data-volume:

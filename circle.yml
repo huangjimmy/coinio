@@ -1,0 +1,13 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - cd ~/cps && docker build -t cpsio/cps -f Docker/Dockerfile .
+
+test:
+  pre:
+    - sleep 5
+  override:
+    - docker run cpsio/cps
