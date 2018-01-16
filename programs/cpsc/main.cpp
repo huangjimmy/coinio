@@ -17,7 +17,7 @@
    cpsc contains documentation for all of its commands. For a list of all commands known to cpsc, simply run it with no arguments:
 ```
 $ ./cpsc
-Command Line Interface to Eos Daemon
+Command Line Interface to Cps Daemon
 Usage: ./cpsc [OPTIONS] SUBCOMMAND
 
 Options:
@@ -464,7 +464,7 @@ int main( int argc, char** argv ) {
    bindtextdomain(locale_domain, locale_path);
    textdomain(locale_domain);
 
-   CLI::App app{"Command Line Interface to Eos Client"};
+   CLI::App app{"Command Line Interface to Cps Client"};
    app.require_subcommand();
    app.add_option( "-H,--host", host, localized("the host where cpsd is running"), true );
    app.add_option( "-p,--port", port, localized("the port where cpsd is running"), true );

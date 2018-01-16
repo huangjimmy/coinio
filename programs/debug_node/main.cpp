@@ -41,8 +41,8 @@ int main(int argc, char** argv) {
    app::application* node = new app::application();
    fc::oexception unhandled_exception;
    try {
-      bpo::options_description app_options("Eos Producer Node");
-      bpo::options_description cfg_options("Eos Producer Node");
+      bpo::options_description app_options("Cps Producer Node");
+      bpo::options_description cfg_options("Cps Producer Node");
       app_options.add_options()
             ("help,h", "Print this help message and exit.")
             ("data-dir,d", bpo::value<boost::filesystem::path>()->default_value("producer_node_data_dir"), "Directory containing databases, configuration file, etc.")
